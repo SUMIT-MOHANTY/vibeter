@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: rgb(249 250 251);
+    color: rgb(17 24 39);
+    line-height: 1.5;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    border: 1px solid rgb(243 244 246);
+  }
+  
+  .btn-primary {
+    background-color: rgb(37 99 235);
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: rgb(29 78 216);
+  }
+  
+  .btn-secondary {
+    background-color: rgb(243 244 246);
+    color: rgb(17 24 39);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgb(229 231 235);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, rgb(37 99 235), rgb(37 99 235));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(241 245 249);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(203 213 225);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(148 163 184);
+  }
+}

@@ -1,0 +1,69 @@
+# VibeCoding agent managed
+
+# General
+.DS_Store
+Thumbs.db
+*.log
+.env
+.cache/
+metadata.json
+
+# VibeCoding Specific
+.vibecoding/deploy_cache.json
+
+# Node.js / Frontend
+node_modules/
+# dist/ is preserved for instant template preview
+build/
+.next/
+out/
+.vite/
+.nuxt/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+
+# .NET / C#
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Java
+target/
+*.class
+.idea/
+*.iml
+.gradle/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Rust
+target/
+**/*.rs.bk
+
+# C / C++
+*.o
+*.obj
+*.out
+*.app
+coverage
